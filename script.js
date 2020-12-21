@@ -165,7 +165,7 @@ function toggleEdit(event) {
       }
       hide(button);
     }
-    show(defaultPane);
+    show(defaultPane, true);
     editButton.innerHTML = '<span>Edit</span>';
     editing = true;
   }
@@ -328,7 +328,10 @@ function getPaneNumber(elem) {
 function displayNewPane() { 
   const pane = document.createElement('div');
   pane.className = 'pane';
-  pane.innerHTML = `<button class="edit-remove" style="display: none">X</button><button class='edit-drag' style="display: none">=</button><button class='edit-add'>+</button><div class="edit"><i>Add something...</i></div>`;
+  pane.innerHTML = `<button class="edit-remove"><span>X</span></button>
+                    <button class="edit-drag"><span>=</span></button>
+                    <button class="edit-add"><span>+</span></button>
+                    <div class="edit"><i>Add something...</i></div>`;
   container.append(pane);
 }
 
@@ -337,8 +340,11 @@ function removeCurrentPane() {
   pane.remove();
 }
 
-function show(elem) {
-  elem.style.display = '';
+function show(elem, isPane) {
+  elem.style.display = 'block';
+  if(isPane) {
+      elem.style.display = 'flex';
+  }
 }
 
 function hide(elem) {
