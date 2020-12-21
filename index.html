@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+  </head>
+  <body>
+    <div id="title">
+        <span>Reminders</span>
+    </div>
+    
+    <br>
+    
+    <div id="modal" style="display: none"></div>
+    <div id="drop-area" style="display: none"></div>
+
+    <div id="confirm-remove" style="display: none">
+        <p>Are you sure you want to delete?</p>
+        <button id="confirm">Delete</button>
+        <button id="reject">Cancel</button>
+    </div>
+
+    <div id="container">
+        <button id="toggle-edit"><span>Edit</span></button>
+        <div class="pane">
+            <button class="edit-remove" style="display: none"><span>X</span></button>
+            <button class="edit-drag" style="display: none"><span>=</span></button>
+            <button class="edit-add"><span>+</span></button>
+            <div class="edit"> 
+                <i>Add something...</i> 
+            </div>
+        </div>  
+    </div>
+  </body>
+</html>

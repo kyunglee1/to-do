@@ -1,0 +1,141 @@
+body {
+    background-color: rgb(61, 61, 61);
+  }
+  
+  #container {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    border: 5px double red; 
+    border-radius: 20px;
+    padding: 30px 20px;
+    overflow: auto;
+    background-color: lightblue;
+    position: relative;
+  } 
+  
+  .edit {
+    padding: 5px;
+    width: 100%; 
+    min-height: 23px;
+  }
+  
+  .edit-add, .edit-drag, .edit-remove {
+    margin: 5px;
+    padding: 1px;
+    cursor: pointer;
+    text-align: center;
+    width: 23px;
+    height: 23px;
+  }
+  
+  .edit-add {
+    background-color: rgb(12, 209, 12);
+    border-radius: 5px;
+    border: 1px solid black;
+    background-image: linear-gradient(rgb(15, 184, 15),lightgreen);
+  
+  }
+  
+  .edit-drag {
+    background-color: rgb(88, 153, 238);
+    border-radius: 8px;
+    border: 2px solid black;
+    background-image: linear-gradient(rgba(50, 50, 255, 0.781),lightblue);
+  
+  }
+  
+  .edit-remove {
+    border-radius: 100%; 
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.575);
+  }
+  
+  #toggle-edit {
+    margin: 5px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: -20px;
+    float: right;
+    background-color: rgb(61, 169, 212);
+  }
+  
+  button span {
+    color: white;
+  }
+  
+  textarea {
+    height: 20px;
+    width: 100%;
+  }
+  
+  .pane {
+    display: flex;
+    min-height: 28px;
+    margin: 10px;
+    width: 94%;
+    z-index: 2;
+  }
+  
+  .dragging {
+    width: 87%;
+    opacity: .6;
+    position: absolute;
+  }
+  
+  #confirm-remove {
+    border: 3px solid black;
+    width: 250px;
+    height: 80px;
+    padding: 20px;
+    background-color: rgb(161, 161, 161);
+    z-index: 999;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  #modal {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+  }
+  
+  #title {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: cornflowerblue;
+    background-color: white;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 3px solid lightcoral;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10%;
+  }
+  
+  #drop-area {
+    background-color: rgb(20, 173, 20);
+    width: 473px;
+    height: 10px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5px;
+    animation: blink .75s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
